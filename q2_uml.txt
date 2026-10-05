@@ -1,0 +1,17 @@
+classDiagram
+    RaccoonActivityRecord *-- TorontoWard : tracks_activity_in
+    RaccoonActivityRecord <-- Raccoon : is_tracked_by
+    TorontoWard: -ward_id
+    TorontoWard: -ward_name
+    RaccoonActivityRecord: -date
+    RaccoonActivityRecord: -hour
+    RaccoonActivityRecord: /datetime
+    RaccoonActivityRecord: -units_observed
+    RaccoonActivityRecord: -bins_compromised
+    RaccoonActivityRecord: -raccoon_confidence
+    RaccoonActivityRecord: -average_unit_weight_kg
+    RaccoonActivityRecord: -incidents_of_raccoon_human_standoff
+    RaccoonActivityRecord: -avg_standoff_duration_sec
+    RaccoonActivityRecord: -proximity_to_a_patio
+    RaccoonActivityRecord: -complaints_logged
+    RaccoonActivityRecord: +add_raccoon_observation()

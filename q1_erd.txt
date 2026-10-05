@@ -1,0 +1,32 @@
+erDiagram
+    PROJECT_CREATOR ||--|{ PROJECT : creates
+    PROJECT_CREATOR }o--|{ PROJECT_CREATOR_TYPE : is_type
+    PROJECT_CREATOR ||--o{ PROJECT_CREATOR_SOCIAL_LINK : has
+    PROJECT }o--|{ PLATFORM_TAG : has
+    PROJECT }o--o{ RELATED_DATASET : has
+    PROJECT {
+        URL link PK, FK
+        String title
+        String description
+        String? article
+        URL? info_url
+    }
+    PROJECT_CREATOR {
+        String name PK, FK
+    }
+    PROJECT_CREATOR_TYPE {
+        String type PK
+    }
+    PROJECT_CREATOR_SOCIAL_LINK {
+        URL social_link
+        String link_brand PK
+    }
+    PLATFORM_TAG {
+        String platform PK
+        URL link
+    }
+    RELATED_DATASET {
+        String title
+        String slug PK
+        boolean show_dataset
+    }
